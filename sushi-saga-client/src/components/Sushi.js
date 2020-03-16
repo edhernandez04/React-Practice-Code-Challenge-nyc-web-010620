@@ -5,7 +5,7 @@ const Sushi = (props) => {
     <div className="sushi">
       <div className="plate" 
            onClick={props.eatSushi}>
-        { /* Tell me if this sushi has been eaten! */ false ? null : <img src={props.sushi.img_url} width="100%" />}
+        { props.eaten ? null : <img src={props.sushi.img_url} width="100%" />}
       </div>
       <h4 className="sushi-details">
         {props.sushi.name} - ${props.sushi.price}
